@@ -15,14 +15,27 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.heading {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
 }
 
 .name {
     font-size: 32px;
     font-weight: bold;
-    text-align: center;
     margin-top: 60px;
     color: #333;
+    text-align: center;
+    flex: 1 0 100%;
 }
 
 .photo-gallery {
@@ -30,6 +43,7 @@ body {
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 20px;
+    width: 100%;
 }
 
 .photo {
@@ -53,4 +67,20 @@ body {
     font-size: 14px;
     line-height: 1.5;
     text-align: justify;
+}
+
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .name {
+        margin-top: 20px;
+    }
+
+    .photo {
+        flex: 1 0 100%;
+    }
 }
